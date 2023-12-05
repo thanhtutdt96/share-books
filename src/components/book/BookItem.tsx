@@ -69,6 +69,7 @@ const BookItem: FC<Props> = ({
         <img
           className="object-cover object-top w-full h-full"
           src={bookCoverType ? coverImageUrl : bookPlaceholder}
+          loading="lazy"
           alt={title}
           onError={({ currentTarget }) => {
             currentTarget.onerror = null;
